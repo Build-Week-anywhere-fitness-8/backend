@@ -5,7 +5,7 @@ exports.up = async (knex) => {
       users.string("name").notNullable();
       users.string("username", 200).notNullable().unique();
       users.string("password", 200).notNullable();
-      users.boolean("role").defaultTo(0);
+      users.string("role"); // BOOLEN TYPE THREW ERR
     })
 
     .createTable("classes", (classes) => {
